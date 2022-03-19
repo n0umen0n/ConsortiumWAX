@@ -1,0 +1,1058 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "addcommuus",
+            "base": "",
+            "fields": [
+                {
+                    "name": "community",
+                    "type": "name"
+                },
+                {
+                    "name": "communityname",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "backgroundurl",
+                    "type": "string"
+                },
+                {
+                    "name": "tokenurl",
+                    "type": "string"
+                },
+                {
+                    "name": "tokensymbol",
+                    "type": "string"
+                },
+                {
+                    "name": "totalcirculation",
+                    "type": "uint64"
+                },
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "toksym",
+                    "type": "symbol"
+                },
+                {
+                    "name": "contractname",
+                    "type": "name"
+                },
+                {
+                    "name": "decimals",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "addfeedata",
+            "base": "",
+            "fields": [
+                {
+                    "name": "votefee",
+                    "type": "float32"
+                },
+                {
+                    "name": "pollfee",
+                    "type": "float32"
+                },
+                {
+                    "name": "communityfee",
+                    "type": "float32"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "close",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "symbol",
+                    "type": "symbol"
+                }
+            ]
+        },
+        {
+            "name": "commdata",
+            "base": "",
+            "fields": [
+                {
+                    "name": "community",
+                    "type": "name"
+                },
+                {
+                    "name": "totalvoters",
+                    "type": "uint64"
+                },
+                {
+                    "name": "totaltokensvoted",
+                    "type": "uint64"
+                },
+                {
+                    "name": "communityname",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "backgroundurl",
+                    "type": "string"
+                },
+                {
+                    "name": "tokenurl",
+                    "type": "string"
+                },
+                {
+                    "name": "tokensymbol",
+                    "type": "string"
+                },
+                {
+                    "name": "toppoll",
+                    "type": "uint64"
+                },
+                {
+                    "name": "staked",
+                    "type": "asset"
+                },
+                {
+                    "name": "toksym",
+                    "type": "symbol"
+                },
+                {
+                    "name": "contractname",
+                    "type": "name"
+                },
+                {
+                    "name": "totalcirculation",
+                    "type": "uint64"
+                },
+                {
+                    "name": "decimals",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "issuer",
+                    "type": "name"
+                },
+                {
+                    "name": "maximum_supply",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "createpollz",
+            "base": "",
+            "fields": [
+                {
+                    "name": "question",
+                    "type": "string"
+                },
+                {
+                    "name": "answers",
+                    "type": "string[]"
+                },
+                {
+                    "name": "totalvote",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                },
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "uniqueurl",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "pollkey",
+                    "type": "uint64"
+                },
+                {
+                    "name": "toksym",
+                    "type": "symbol"
+                },
+                {
+                    "name": "contractname",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "creatordata",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "currency_stats",
+            "base": "",
+            "fields": [
+                {
+                    "name": "supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "issuer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "datapoints",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "uint64"
+                },
+                {
+                    "name": "median",
+                    "type": "uint64"
+                },
+                {
+                    "name": "timestamp",
+                    "type": "time_point"
+                }
+            ]
+        },
+        {
+            "name": "deleteleader",
+            "base": "",
+            "fields": [
+                {
+                    "name": "voter",
+                    "type": "name"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "deletepoll",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollkey",
+                    "type": "uint64"
+                },
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "divperiod",
+            "base": "",
+            "fields": [
+                {
+                    "name": "periodstart",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "claimperiod",
+                    "type": "uint64"
+                },
+                {
+                    "name": "periodfreq",
+                    "type": "int64"
+                }
+            ]
+        },
+        {
+            "name": "feedata",
+            "base": "",
+            "fields": [
+                {
+                    "name": "votefee",
+                    "type": "float32"
+                },
+                {
+                    "name": "pollfee",
+                    "type": "float32"
+                },
+                {
+                    "name": "communityfee",
+                    "type": "float32"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "indtotalstkh",
+            "base": "",
+            "fields": [
+                {
+                    "name": "staker",
+                    "type": "name"
+                },
+                {
+                    "name": "totalstaked",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "issue",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "issuereward",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "kysimused",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollkey",
+                    "type": "uint64"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                },
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "totalvote",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "answers",
+                    "type": "string[]"
+                },
+                {
+                    "name": "question",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "nrofvoters",
+                    "type": "uint8"
+                },
+                {
+                    "name": "sumofallopt",
+                    "type": "uint64"
+                },
+                {
+                    "name": "uniqueurl",
+                    "type": "string"
+                },
+                {
+                    "name": "timecreated",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "modcommuus",
+            "base": "",
+            "fields": [
+                {
+                    "name": "community",
+                    "type": "name"
+                },
+                {
+                    "name": "communityname",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "name": "backgroundurl",
+                    "type": "string"
+                },
+                {
+                    "name": "tokenurl",
+                    "type": "string"
+                },
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "totalcirculation",
+                    "type": "uint64"
+                },
+                {
+                    "name": "tokensymbol",
+                    "type": "string"
+                },
+                {
+                    "name": "toksym",
+                    "type": "symbol"
+                },
+                {
+                    "name": "contractname",
+                    "type": "name"
+                },
+                {
+                    "name": "decimals",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "open",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "symbol",
+                    "type": "symbol"
+                },
+                {
+                    "name": "ram_payer",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "paid",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "pairs_struct",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "pool1",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "pool2",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "fee",
+                    "type": "int32"
+                },
+                {
+                    "name": "fee_contract",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "parimad",
+            "base": "",
+            "fields": [
+                {
+                    "name": "governor",
+                    "type": "name"
+                },
+                {
+                    "name": "rewardsreceived",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "personstaked",
+            "base": "",
+            "fields": [
+                {
+                    "name": "staker",
+                    "type": "name"
+                },
+                {
+                    "name": "staked",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "retire",
+            "base": "",
+            "fields": [
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "setdivper",
+            "base": "",
+            "fields": [
+                {
+                    "name": "claimperiod",
+                    "type": "uint64"
+                },
+                {
+                    "name": "periodfreq",
+                    "type": "int64"
+                }
+            ]
+        },
+        {
+            "name": "settotstkd",
+            "base": "",
+            "fields": [
+                {
+                    "name": "algstk",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "stakeforcomm",
+            "base": "",
+            "fields": [
+                {
+                    "name": "staker",
+                    "type": "name"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "supplydown",
+            "base": "",
+            "fields": [
+                {
+                    "name": "issuer",
+                    "type": "name"
+                },
+                {
+                    "name": "maximum_supply",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "tokenarvdel",
+            "base": "",
+            "fields": [
+                {
+                    "name": "voteri",
+                    "type": "name"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "totalstk",
+            "base": "",
+            "fields": [
+                {
+                    "name": "totalstaked",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "unstkfromcom",
+            "base": "",
+            "fields": [
+                {
+                    "name": "staker",
+                    "type": "name"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "usrpollz",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollkey",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "usrpollzs",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollkey",
+                    "type": "uint64"
+                },
+                {
+                    "name": "usersvote",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "usrvotedel",
+            "base": "",
+            "fields": [
+                {
+                    "name": "voteri",
+                    "type": "name"
+                },
+                {
+                    "name": "pollikey",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "votercounts",
+            "base": "",
+            "fields": [
+                {
+                    "name": "voter",
+                    "type": "name"
+                },
+                {
+                    "name": "id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "voterstatzi",
+            "base": "",
+            "fields": [
+                {
+                    "name": "voter",
+                    "type": "name"
+                },
+                {
+                    "name": "first_vote_time",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "dailyvoted",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "votez",
+            "base": "",
+            "fields": [
+                {
+                    "name": "usersvote",
+                    "type": "uint64"
+                },
+                {
+                    "name": "pollkey",
+                    "type": "uint64"
+                },
+                {
+                    "name": "option",
+                    "type": "uint8"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                },
+                {
+                    "name": "voter",
+                    "type": "name"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addcommuus",
+            "type": "addcommuus",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addfeedata",
+            "type": "addfeedata",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "close",
+            "type": "close",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "createpollz",
+            "type": "createpollz",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deleteleader",
+            "type": "deleteleader",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deletepoll",
+            "type": "deletepoll",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "issue",
+            "type": "issue",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "issuereward",
+            "type": "issuereward",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "modcommuus",
+            "type": "modcommuus",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "open",
+            "type": "open",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "retire",
+            "type": "retire",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setdivper",
+            "type": "setdivper",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "settotstkd",
+            "type": "settotstkd",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "stakeforcomm",
+            "type": "stakeforcomm",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "supplydown",
+            "type": "supplydown",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "tokenarvdel",
+            "type": "tokenarvdel",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unstkfromcom",
+            "type": "unstkfromcom",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "usrvotedel",
+            "type": "usrvotedel",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "votez",
+            "type": "votez",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "accounts",
+            "type": "account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "commcreator",
+            "type": "creatordata",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "commdata",
+            "type": "commdata",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "datapoints",
+            "type": "datapoints",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "divperiod",
+            "type": "divperiod",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "feedata",
+            "type": "feedata",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "indtotalstkh",
+            "type": "indtotalstkh",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "kysimused",
+            "type": "kysimused",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "paid",
+            "type": "paid",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "pairs",
+            "type": "pairs_struct",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "parimad",
+            "type": "parimad",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "personstaked",
+            "type": "personstaked",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "stat",
+            "type": "currency_stats",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "theusrpoll",
+            "type": "usrpollz",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "theusrpolls",
+            "type": "usrpollzs",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "totalstk",
+            "type": "totalstk",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "voterincoms",
+            "type": "votercounts",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "voterstatzi",
+            "type": "voterstatzi",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
