@@ -191,8 +191,7 @@ TABLE kysimused {
 
 
 
-
-
+/*
 TABLE usrpollz {
 
     
@@ -202,23 +201,20 @@ TABLE usrpollz {
 
     };
      typedef eosio::multi_index<name("theusrpoll"), usrpollz > kasutajapolz;
+*/
 
 
 
+TABLE usrpollopt {
 
-    TABLE usrpollzs {
-
-    
-    uint64_t pollkey;
-
-    vector <uint64_t> usersvote;
-
-
+    uint32_t pollkey;
+        
     auto primary_key() const { return pollkey; }
 
-
     };
-     typedef eosio::multi_index<name("theusrpolls"), usrpollzs > kasutajapolzs;
+     typedef eosio::multi_index<name("usrpollopt"), usrpollopt > kaspolzopt;
+
+
 
 
 
@@ -612,6 +608,24 @@ if ( to == _self )
 }
 
 
+
+[[eosio::action]]
+void deletecomm (
+
+name community)
+
+{
+
+require_auth (_self);
+
+comdata comtblt(_self, _self.value);
+auto comrow = comtblt.find(community.value);
+check(comrow != comtblt.end(), "No such community exists");
+
+comtblt.erase(comrow);    
+
+
+}
 
 
 [[eosio::action]]
@@ -1223,7 +1237,7 @@ comdata comtblt(_self, _self.value);
 auto comrow = comtblt.find(community.value);
 check(comrow == comtblt.end(), "This community has been added");
 
-struct asset initial = {int64_t (00000), symbol ("POLL", 4)};
+struct asset initial = {int64_t (10000), symbol ("POLL", 4)};
 
 comtblt.emplace(_self, [&](auto& item) {
     item.community = community;
@@ -1265,7 +1279,7 @@ string memo = "Token issuance to community creator.";
 
 int64_t varreward = (1);
 
-int64_t minreward = (500000000);
+int64_t minreward = (5000000000000);
 
 rewandfee (feeusd.communityfee, memo, varreward, minreward, community, creator);
 
@@ -1320,7 +1334,7 @@ ACTION usrvotedel ( const name&   voteri, const uint64_t&   pollikey )
     require_auth(name("ironscimitar"));
 
 
-  kasutajapolz userstbl(_self, voteri.value);
+  kaspolzopt userstbl(_self, voteri.value);
   auto usersrow = userstbl.find(pollikey);
   userstbl.erase(usersrow);
   }
@@ -1491,23 +1505,23 @@ check( pollsrow != pollstbl.end(), "Poll does not exist.");
                              
 
 //quadratic voting
-//uint64_t voteadjusted = sqrt(usersvote);
+uint64_t voteadjusted = sqrt(usersvote);
 
 uint8_t elmnr = option - 1;
 
 
 
 
-kasutajapolz userstbl(_self, voter.value);
+kaspolzopt userstbl(_self, voter.value);
   const auto& usersrow = userstbl.find(pollkey);
 
   
    if (usersrow == userstbl.end()) {
 
             pollstbl.modify( pollsrow, _self, [&](auto& contract) {
-            contract.totalvote[elmnr] += usersvote;
+            contract.totalvote[elmnr] += voteadjusted;
             contract.nrofvoters += 1;
-            contract.sumofallopt += usersvote;
+            contract.sumofallopt += voteadjusted;
             });
 
             userstbl.emplace( _self, [&](auto& contractt) {

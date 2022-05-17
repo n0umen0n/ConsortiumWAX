@@ -280,6 +280,16 @@
             ]
         },
         {
+            "name": "deletecomm",
+            "base": "",
+            "fields": [
+                {
+                    "name": "community",
+                    "type": "name"
+                }
+            ]
+        },
+        {
             "name": "deleteleader",
             "base": "",
             "fields": [
@@ -722,26 +732,12 @@
             ]
         },
         {
-            "name": "usrpollz",
+            "name": "usrpollopt",
             "base": "",
             "fields": [
                 {
                     "name": "pollkey",
-                    "type": "uint64"
-                }
-            ]
-        },
-        {
-            "name": "usrpollzs",
-            "base": "",
-            "fields": [
-                {
-                    "name": "pollkey",
-                    "type": "uint64"
-                },
-                {
-                    "name": "usersvote",
-                    "type": "uint64[]"
+                    "type": "uint32"
                 }
             ]
         },
@@ -842,6 +838,11 @@
         {
             "name": "createpollz",
             "type": "createpollz",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deletecomm",
+            "type": "deletecomm",
             "ricardian_contract": ""
         },
         {
@@ -1018,22 +1019,15 @@
             "key_types": []
         },
         {
-            "name": "theusrpoll",
-            "type": "usrpollz",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        },
-        {
-            "name": "theusrpolls",
-            "type": "usrpollzs",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        },
-        {
             "name": "totalstk",
             "type": "totalstk",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "usrpollopt",
+            "type": "usrpollopt",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
