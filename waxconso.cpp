@@ -1521,7 +1521,7 @@ kaspolzopt userstbl(_self, voter.value);
             pollstbl.modify( pollsrow, _self, [&](auto& contract) {
             contract.totalvote[elmnr] += voteadjusted;
             contract.nrofvoters += 1;
-            contract.sumofallopt += voteadjusted;
+            contract.sumofallopt += usersvote;
             });
 
             userstbl.emplace( _self, [&](auto& contractt) {
