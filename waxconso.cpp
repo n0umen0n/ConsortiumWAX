@@ -393,6 +393,18 @@ int64_t affreward = adjrewardint * 0.05;
 
 struct asset affireward = {int64_t (affreward), symbol ("POLL", 4)};
 
+
+
+int64_t tresreward = adjrewardint * 0.1; 
+
+struct asset tresurirew = {int64_t (tresreward), symbol ("POLL", 4)};
+
+string tresmemo = "Token issuance to Consortium's treasury."; 
+
+issuepolltok ( _self, tresurirew, tresmemo );
+
+
+
 creatordatatb creatortbl(_self, _self.value);
 auto creatorrow = creatortbl.find(community.value);
 
