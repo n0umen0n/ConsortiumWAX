@@ -4,7 +4,7 @@
 Welcome to the Consortium's smart contracts repository! 
 
 
-<p>Contract is deployed to the following account on the EOS mainnet:
+<p>Contract is deployed to the following account on the WAX mainnet:
         <ul>
         <li><b>pollpollpoll</b>   </li>   </ul></p>
         <hr></hr>
