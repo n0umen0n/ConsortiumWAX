@@ -204,6 +204,16 @@ TABLE usrpollz {
 */
 
 
+TABLE white {
+
+name accounts;
+
+auto primary_key() const { return accounts.value; }
+    };
+
+typedef eosio::multi_index<name("approvedaccs"), white > approvedaccs;
+
+
 
 TABLE usrpollopt {
 
@@ -560,7 +570,7 @@ void add_bal_paid( const name& owner, const asset& value, const name& ram_payer 
 
 
 
-
+/*
 
 
 void burn ( name from, asset quantity, string memo )
@@ -594,13 +604,33 @@ void burn ( name from, asset quantity, string memo )
 
         sub_balance( from, quantity );
     }
+*/
 
 
 
 
 
 
+[[eosio::action]]
+void whiteaccs (vector <name> accounts, name community) {
 
+require_auth ( _self);
+
+for (size_t i = 0; i < accounts.size(); ++i)
+
+{
+
+approvedaccs whitetbl(_self, community.value);
+auto whiterow = whitetbl.find(accounts[i].value);
+check(whiterow == whitetbl.end(), "This account has been whitelisted");
+
+whitetbl.emplace(_self, [&](auto& item) {
+    item.accounts = accounts[i];
+  });
+
+}
+
+}
 
 
 
@@ -1357,8 +1387,14 @@ ACTION createpollz (string question, vector <string> answers, vector <uint64_t> 
 
 require_auth ( creator );
 
+if (community == name("e2qmyumekcyr")) {
 
-  
+approvedaccs whitetbl(_self, community.value);
+auto whiterow = whitetbl.find(creator.value);
+check(whiterow != whitetbl.end(), "Only Galactic Hubs representative can create poll in this community.");
+
+}
+
 
       check(!totalvote.empty(), "No empty totalvote");
       check(!answers.empty(), "No empty answers");

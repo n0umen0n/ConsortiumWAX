@@ -812,6 +812,30 @@
                     "type": "name"
                 }
             ]
+        },
+        {
+            "name": "white",
+            "base": "",
+            "fields": [
+                {
+                    "name": "accounts",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "whiteaccs",
+            "base": "",
+            "fields": [
+                {
+                    "name": "accounts",
+                    "type": "name[]"
+                },
+                {
+                    "name": "community",
+                    "type": "name"
+                }
+            ]
         }
     ],
     "actions": [
@@ -924,12 +948,24 @@
             "name": "votez",
             "type": "votez",
             "ricardian_contract": ""
+        },
+        {
+            "name": "whiteaccs",
+            "type": "whiteaccs",
+            "ricardian_contract": ""
         }
     ],
     "tables": [
         {
             "name": "accounts",
             "type": "account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "approvedaccs",
+            "type": "white",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
